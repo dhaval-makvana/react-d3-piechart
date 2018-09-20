@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import PieChart from './PieChart'
-import LabeledArc from './LabeledArc'
+import WidgetTopsearches from './PieChart'
+// import LabeledArc from './LabeledArc'
 
 const data = require('./data.json');
 
@@ -14,7 +14,7 @@ class App extends Component {
 
   componentWillMount() {
     // top google searches data
-    const selectedData = topGoogleSearches.All;
+    const selectedData = data.All;
     let selectedDataArray = [];
 
     for (let key in selectedData) {
@@ -34,6 +34,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h2>This is App for displaying pie chart for top google searches</h2>
         <WidgetTopsearches 
           data={this.state.data} 
           x={200}
